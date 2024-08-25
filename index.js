@@ -3,6 +3,11 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.redirect("/bfhl");
+  });
+  
+
 // Function to format user_id
 function formatUserId(fullName, dob) {
   const nameFormatted = fullName.toLowerCase().replace(/\s+/g, "_");
